@@ -2,9 +2,6 @@
 
 A new Flutter project.
 
-## Download Link
-https://www.mediafire.com/file/v7g1u6275t3nd5s/app-release.apk/file
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.

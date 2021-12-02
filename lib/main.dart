@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/connectivity.dart';
+import 'package:provider/provider.dart';
 import 'bars.dart';
 
+
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,8 +13,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Bars(),  
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ConnectivyProvider(),
+          child: const Bars(),
+        )
+      ],
+      child:const MaterialApp(
+        color: Colors.black,
+        debugShowCheckedModeBanner: false,
+        home: Bars(),
+      ),
     );
   }
 }
